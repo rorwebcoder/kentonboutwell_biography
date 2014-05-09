@@ -61,7 +61,7 @@ module KentonBoutwell
     
     config.assets.initialize_on_precompile = false
     
-    config.assets.precompile += %w(bootstrap.min.js jquery-ba-cond.min.js jquery-slitslider.js main.js twitter-bootstrap-hover-dropdown.min.js)
-    config.assets.precompile += %w(bootstrap.min.css bootstrap-responsive.min.css docs.css home.css.scss main.css mixins.css prettify.css sl-slide.css variables.css) 
+    config.assets.precompile += %w(jquery-ba-cond.min.js jquery-slitslider.js)
+    #~ config.assets.precompile += %w(bootstrap.min.css bootstrap-responsive.min.css docs.css home.css.scss main.css mixins.css prettify.css sl-slide.css variables.css) 
   end
 end
