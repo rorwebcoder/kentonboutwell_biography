@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KentonBoutwell</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+    <!--Header-->
+    <header class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a id="logo" class="pull-left" href="/"></a>
+                <div class="nav-collapse collapse pull-right">
+                    <ul class="nav">
+                        <li class='<%=params[:action] == "show" ? "active" : ""%>'><a href="/">Home</a></li>
+                        <li class='<%=params[:action] == "about" ? "active" : ""%>'><a href="/about">About</a></li>
+                     <!--   <li><a href="#">Videos</a></li>
+                        <li><a href="#">Images</a></li>-->
+                        <li><a href="http://kentonboutwell.com/wordpress/success-and-happiness/" target="_blank">Blog</a></li> 
+                        <li class='<%=params[:action] == "contact" ? "active" : ""%>'><a href="/contact">Contact</a></li>
+                    </ul>        
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+
+  <%=yield%>
+
+
+<!--Footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span5 cp">
+                &copy; 2013 <a target="_blank" href="#" title="">kentonboutwell</a>. All Rights Reserved.
+            </div>
+            <!--/Copyright-->
+
+            <div class="span6">
+                <ul class="social pull-right">
+                    <li><a href="http://www.facebook.com/kenton.boutwell"><i class=""><img src="/assets/template/sample/f.png" style="width:40px;height:40px"></i></a></li>
+                    <li><a href="http://www.twitter.com/kentonboutwell"><i class=""><img src="/assets/template/sample/t.png" style="width:40px;height:40px"></i></a></li>
+                    <li><a href="http://www.youtube.com/kentonboutwell"><i class=""><img src="/assets/template/sample/y.png" style="width:40px;height:40px"></i></a></li>
+                </ul>
+            </div>
+
+            <!--<div class="span1">
+                <a id="gototop" class="gototop pull-right" href="#"><i class="icon-angle-up"></i></a>
+            </div>-->
+            <!--/Goto Top-->
+        </div>
+    </div>
+</footer>
+<!--/Footer-->
+
+
+
+</body>
+</html>
